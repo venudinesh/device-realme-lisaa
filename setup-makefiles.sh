@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=vitamin
+DEVICE=pickle
 VENDOR=oneplus
 
 # Load extract_utils and do some sanity checks
@@ -27,7 +27,7 @@ source "${HELPER}"
 
 function vendor_imports() {
 	cat <<EOF >>"$1"
-		"device/oneplus/vitamin",
+		"device/oneplus/pickle",
 		"hardware/mediatek",
 		"hardware/mediatek/libmtkperf_client",
 		"hardware/oplus"

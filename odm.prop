@@ -17,11 +17,11 @@ persist.vendor.vonr_setting_support=1
 
 # SoC
 ro.soc.manufacturer=Mediatek
-ro.soc.model=MT6983
+ro.soc.model=MT6895
 
 # Project
-ro.product.hw=21871
-ro.separate.soft=21871
+ro.product.hw=21862
+ro.separate.soft=21862
 
 # Sensor
 persist.sys.enable_mtk_scp_dump=1

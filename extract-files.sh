@@ -7,7 +7,7 @@
 
 set -e
 
-DEVICE=vitamin
+DEVICE=pickle
 VENDOR=oneplus
 
 # Load extract_utils and do some sanity checks
@@ -106,7 +106,7 @@ function blob_fixup() {
         vendor/bin/mnld|\
         vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so|\
         vendor/lib64/liboplus_mtkcam_lightsensorprovider.so|\
-        vendor/lib64/mt6983/libaalservice.so)
+        vendor/lib64/mt6895/libaalservice.so)
             [ "$2" = "" ] && return 0
             grep -q "libshim_sensors.so" "${2}" || "${PATCHELF}" --add-needed "libshim_sensors.so" "${2}"
             ;;
@@ -122,21 +122,21 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
-        vendor/lib64/hw/mt6983/android.hardware.camera.provider@2.6-impl-mediatek.so)
+        vendor/lib64/hw/mt6895/android.hardware.camera.provider@2.6-impl-mediatek.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             grep -q "libcamera_metadata_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
             ;;
-        vendor/lib64/hw/mt6983/vendor.mediatek.hardware.pq@2.15-impl.so)
+        vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.15-impl.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             grep -q "libshim_sensors.so" "${2}" || "${PATCHELF}" --add-needed "libshim_sensors.so" "${2}"
             ;;
         vendor/lib64/lib3a.ae.pipe.so|\
-        vendor/lib64/mt6983/lib3a.awbsync.so|\
-        vendor/lib64/mt6983/lib3a.flash.so|\
-        vendor/lib64/mt6983/lib3a.sensors.color.so|\
-        vendor/lib64/mt6983/lib3a.sensors.flicker.so)
+        vendor/lib64/mt6895/lib3a.awbsync.so|\
+        vendor/lib64/mt6895/lib3a.flash.so|\
+        vendor/lib64/mt6895/lib3a.sensors.color.so|\
+        vendor/lib64/mt6895/lib3a.sensors.flicker.so)
             [ "$2" = "" ] && return 0
             grep -q "liblog.so" "${2}" || "${PATCHELF_0_17_2}" --add-needed "liblog.so" "${2}"
             ;;
@@ -144,11 +144,11 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.frameworks.stats-V1-ndk_platform.so" "android.frameworks.stats-V1-ndk.so" "${2}"
             ;;
-        vendor/lib64/mt6983/libmnl.so)
+        vendor/lib64/mt6895/libmnl.so)
             [ "$2" = "" ] && return 0
             grep -q "libcutils.so" "${2}" || "${PATCHELF}" --add-needed "libcutils.so" "${2}"
             ;;
-        vendor/lib64/mt6983/libmtkcam_stdutils.so)
+        vendor/lib64/mt6895/libmtkcam_stdutils.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;

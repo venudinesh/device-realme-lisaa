@@ -33,4 +33,4 @@ ro.vendor.mtk_md3_support=0
 ro.vendor.mtk_mobile_management=0
 
 # SKU
-ro.boot.hardware.sku=vitamin
+ro.boot.hardware.sku=pickle

@@ -9,25 +9,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from the custom device configuration.
-$(call inherit-product, device/oneplus/vitamin/device.mk)
+$(call inherit-product, device/oneplus/pickle/device.mk)
 
 # Inherit from the LineageOS configuration.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_BRAND := OnePlus
-PRODUCT_DEVICE := vitamin
+PRODUCT_DEVICE := pickle
 PRODUCT_MANUFACTURER := OnePlus
-PRODUCT_MODEL := CPH2491
-PRODUCT_NAME := lineage_vitamin
+PRODUCT_MODEL := CPH2423
+PRODUCT_NAME := lineage_pickle
 
-PRODUCT_SYSTEM_DEVICE := OP556FL1
-PRODUCT_SYSTEM_NAME := CPH2491
+PRODUCT_SYSTEM_DEVICE := CPH2423
+PRODUCT_SYSTEM_NAME := CPH2423
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="sys_mssi_64_cn_armv82-user 14 UKQ1.230924.001 1724319603020 release-keys" \
+    PRIVATE_BUILD_DESC="sys_mssi_64_cn_armv82-user 13 TP1A.220905.001 1676518158691 release-keys" \
     TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
-BUILD_FINGERPRINT := OnePlus/CPH2491/OP556FL1:14/UKQ1.230924.001/T.R4T3.19a7d97_1-dabd:user/release-keys
+BUILD_FINGERPRINT := OnePlus/CPH2411/OP5566L1:13/TP1A.220905.001/S.e4ee63_1:user/release-keys
