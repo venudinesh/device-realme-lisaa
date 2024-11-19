@@ -7,8 +7,8 @@
 
 set -e
 
-DEVICE=pickle
-VENDOR=oneplus
+DEVICE=lisaa
+VENDOR=realme
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -27,7 +27,7 @@ source "${HELPER}"
 
 function vendor_imports() {
 	cat <<EOF >>"$1"
-		"device/oneplus/pickle",
+		"device/realme/lisaa",
 		"hardware/mediatek",
 		"hardware/mediatek/libmtkperf_client",
 		"hardware/oplus"
