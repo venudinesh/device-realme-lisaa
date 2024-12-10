@@ -46,6 +46,7 @@ BOARD_RAMDISK_USE_LZ4 := true
 
 BOARD_KERNEL_CMDLINE += \
     bootopt=64S3,32N2,64N2 \
+    androidboot.selinux=permissive \
     bootconfig
 
 BOARD_MKBOOTIMG_ARGS += \
