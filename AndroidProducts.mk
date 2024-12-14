@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_lisaa.mk
+    $(LOCAL_DIR)/infinity_lisaa.mk

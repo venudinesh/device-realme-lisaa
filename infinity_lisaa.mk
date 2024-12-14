@@ -11,14 +11,38 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from the custom device configuration.
 $(call inherit-product, device/realme/lisaa/device.mk)
 
-# Inherit from the LineageOS configuration.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from the InfinityOS configuration.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+
+
+#inf misc
+# Whether you are compiling being an OFFICIAL Maintainer:
+INFINITY_BUILD_TYPE := OFFICIAL
+
+# Maintainer Name
+INFINITY_MAINTAINER := "Sukuna"
+
+# Whether the package includes System BLURS
+TARGET_SUPPORTS_BLUR := true
+
+# Whether the compiled package ships Widely Used Minimal Google Apps:
+WITH_GAPPS := true
+
+# Whether the compiled package ships Complete present Google Apps:
+TARGET_SHIPS_FULL_GAPPS := true
+
+# Whether the compiled shipped gapps package uses Google Dialer, Messaging, Contacts:
+TARGET_BUILD_GOOGLE_TELEPHONY := false
+
+# Whether the compiled package ships Moto Calculator irrespective VANILLA or GAPPS:
+USE_MOTO_CALCULATOR := true
+
 
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := lisaa
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_MODEL := RMX3562
-PRODUCT_NAME := lineage_lisaa
+PRODUCT_NAME := infinity_lisaa
 
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme

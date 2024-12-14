@@ -33,3 +33,10 @@ vendor.rild.libargs=-d /dev/ttyC0
 wifi.direct.interface=p2p0
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
+
+#misc
+ro.infinity.soc=Mediatek Dimensity 8100
+ro.infinity.battery=4500 mAh
+ro.infinity.display=1080 x 2412, 120 Hz
+ro.infinity.camera=50MP + 8MP + 2MP
+ro.product.marketname=Realme GT neo 3
