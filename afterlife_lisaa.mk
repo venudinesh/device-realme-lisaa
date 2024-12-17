@@ -18,7 +18,7 @@ $(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 TARGET_SUPPORTS_BLUR := true
 TARGET_UDFPS_ANIMATIONS := true
 AFTERLIFE_GAPPS := true
-AFTERLIFE_MAINTANER := sukuna
+AFTERLIFE_MAINTAINER := sukuna
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_BRAND := Realme
