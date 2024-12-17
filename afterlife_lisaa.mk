@@ -17,9 +17,21 @@ $(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 #misc
 TARGET_SUPPORTS_BLUR := true
 TARGET_UDFPS_ANIMATIONS := true
-AFTERLIFE_GAPPS := true
 AFTERLIFE_MAINTAINER := sukuna
 TARGET_FACE_UNLOCK_SUPPORTED := true
+
+#gapps
+AFTERLIFE_GAPPS := false
+GAPPS_CORE := false
+TARGET_INCLUDE_GOOGLE_AUDIO := false
+TARGET_INCUDE_CHROME := false
+TARGET_INCLUDE_CONTACTS := false
+TARGET_INCLUDE_DIALER := false
+TARGET_INCLUDE_GBOARD := false
+TARGET_INCLUDE_GMAIL := false
+TARGET_INCLUDE_MAPS := false 
+TARGET_INCLUDE_MESSAGES := false
+TARGET_INCLUDE_PHOTOS := false
 
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := lisaa
